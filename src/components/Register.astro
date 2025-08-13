@@ -1,0 +1,318 @@
+---
+---
+
+<section id="register" class="py-20 bg-block-emerald-block">
+  <div class="absolute inset-0 bg-dark-50"></div>
+  <div class="relative z-10 container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6 text-green eclipse-text-glow">
+        Register Now
+      </h2>
+      <p class="text-xl text-aqua text-shadow-md">Secure Your Spot at Eclipse '25</p>
+      <div class="w-16 h-16 mx-auto mt-6 bg-item-emerald bg-contain bg-no-repeat animate-float"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto">
+      <!-- Registration Options -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Individual Registration -->
+        <div class="panel p-8 text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-item-diamond bg-contain bg-no-repeat"></div>
+          <h3 class="text-2xl font-bold mb-4 text-eclipse-blue">Individual Pass</h3>
+          <div class="text-4xl font-bold text-gold mb-4">₹299</div>
+          <ul class="text-left space-y-2 mb-6">
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-emerald bg-contain bg-no-repeat"></div>
+              Access to all events
+            </li>
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-emerald bg-contain bg-no-repeat"></div>
+              Food & refreshments
+            </li>
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-emerald bg-contain bg-no-repeat"></div>
+              Eclipse merchandise
+            </li>
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-emerald bg-contain bg-no-repeat"></div>
+              Certificate of participation
+            </li>
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-emerald bg-contain bg-no-repeat"></div>
+              Networking opportunities
+            </li>
+          </ul>
+          <button class="button w-full py-3 text-lg bg-green hover:bg-dark-green transition-all transform hover:scale-105">
+            Register Individual
+          </button>
+        </div>
+        
+        <!-- Team Registration -->
+        <div class="panel p-8 text-center border-4 border-gold eclipse-glow">
+          <div class="w-16 h-16 mx-auto mb-4 bg-item-nether-star bg-contain bg-no-repeat"></div>
+          <h3 class="text-2xl font-bold mb-4 text-eclipse-blue">Team Pass</h3>
+          <div class="text-4xl font-bold text-gold mb-2">₹999</div>
+          <div class="text-sm text-gray mb-4">For 4 members</div>
+          <ul class="text-left space-y-2 mb-6">
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-emerald bg-contain bg-no-repeat"></div>
+              Everything in Individual Pass
+            </li>
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-gold-ingot bg-contain bg-no-repeat"></div>
+              Team coordination support
+            </li>
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-gold-ingot bg-contain bg-no-repeat"></div>
+              Priority event registration
+            </li>
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-gold-ingot bg-contain bg-no-repeat"></div>
+              Team photo session
+            </li>
+            <li class="flex items-center">
+              <div class="w-4 h-4 mr-2 bg-item-gold-ingot bg-contain bg-no-repeat"></div>
+              Exclusive team merchandise
+            </li>
+          </ul>
+          <button class="button w-full py-3 text-lg bg-gold hover:bg-yellow-600 transition-all transform hover:scale-105">
+            Register Team
+          </button>
+          <div class="mt-2 text-sm text-eclipse-blue">Most Popular!</div>
+        </div>
+      </div>
+      
+      <!-- Registration Form -->
+      <div class="book p-8">
+        <h3 class="text-2xl font-bold text-center mb-8">Registration Form</h3>
+        
+        <form class="space-y-6" id="registration-form">
+          <!-- Registration Type -->
+          <div>
+            <label class="block text-black font-bold mb-2">Registration Type</label>
+            <div class="flex space-x-4">
+              <label class="flex items-center">
+                <input type="radio" name="type" value="individual" class="mr-2" checked>
+                <span>Individual (₹299)</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="type" value="team" class="mr-2">
+                <span>Team (₹999)</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Personal Information -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="reg-name" class="block text-black font-bold mb-2">Full Name *</label>
+              <input 
+                type="text" 
+                id="reg-name" 
+                name="name" 
+                required
+                class="w-full p-3 border-2 border-gray rounded bg-white text-black"
+                placeholder="Your Full Name"
+              >
+            </div>
+            
+            <div>
+              <label for="reg-email" class="block text-black font-bold mb-2">Email *</label>
+              <input 
+                type="email" 
+                id="reg-email" 
+                name="email" 
+                required
+                class="w-full p-3 border-2 border-gray rounded bg-white text-black"
+                placeholder="your.email@example.com"
+              >
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="reg-phone" class="block text-black font-bold mb-2">Phone Number *</label>
+              <input 
+                type="tel" 
+                id="reg-phone" 
+                name="phone" 
+                required
+                class="w-full p-3 border-2 border-gray rounded bg-white text-black"
+                placeholder="+91 98765 43210"
+              >
+            </div>
+            
+            <div>
+              <label for="reg-college" class="block text-black font-bold mb-2">College/University *</label>
+              <input 
+                type="text" 
+                id="reg-college" 
+                name="college" 
+                required
+                class="w-full p-3 border-2 border-gray rounded bg-white text-black"
+                placeholder="Your Institution"
+              >
+            </div>
+          </div>
+          
+          <!-- Events Selection -->
+          <div>
+            <label class="block text-black font-bold mb-2">Select Events (Multiple allowed)</label>
+            <div class="grid md:grid-cols-2 gap-2">
+              <label class="flex items-center">
+                <input type="checkbox" name="events" value="hercules" class="mr-2">
+                <span>Hercules - Game Development</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="events" value="achilles" class="mr-2">
+                <span>Achilles - 24hr Hackathon</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="events" value="odysseus" class="mr-2">
+                <span>Odysseus - Story Games</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="events" value="orion" class="mr-2">
+                <span>Orion - LAN Tournaments</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="events" value="picture-hunt" class="mr-2">
+                <span>Picture Hunt</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" name="events" value="all" class="mr-2">
+                <span>All Events</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Team Information (Hidden by default) -->
+          <div id="team-info" class="hidden">
+            <h4 class="text-lg font-bold mb-4">Team Information</h4>
+            <div class="space-y-4">
+              <div>
+                <label for="team-name" class="block text-black font-bold mb-2">Team Name</label>
+                <input 
+                  type="text" 
+                  id="team-name" 
+                  name="teamName" 
+                  class="w-full p-3 border-2 border-gray rounded bg-white text-black"
+                  placeholder="Your Team Name"
+                >
+              </div>
+              
+              <div>
+                <label class="block text-black font-bold mb-2">Team Members (Including you)</label>
+                <div class="space-y-2">
+                  <input 
+                    type="text" 
+                    name="member2" 
+                    class="w-full p-2 border border-gray rounded bg-white text-black"
+                    placeholder="Member 2 Name & Email"
+                  >
+                  <input 
+                    type="text" 
+                    name="member3" 
+                    class="w-full p-2 border border-gray rounded bg-white text-black"
+                    placeholder="Member 3 Name & Email"
+                  >
+                  <input 
+                    type="text" 
+                    name="member4" 
+                    class="w-full p-2 border border-gray rounded bg-white text-black"
+                    placeholder="Member 4 Name & Email"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Terms and Conditions -->
+          <div>
+            <label class="flex items-start">
+              <input type="checkbox" name="terms" required class="mr-2 mt-1">
+              <span class="text-sm">
+                I agree to the <a href="/terms" class="link">Terms and Conditions</a> and 
+                <a href="/privacy" class="link">Privacy Policy</a>. I understand that registration 
+                fees are non-refundable and I will follow all event guidelines.
+              </span>
+            </label>
+          </div>
+          
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button 
+              type="submit" 
+              class="button px-12 py-4 text-xl bg-eclipse-purple hover:bg-purple-600 transition-all transform hover:scale-105"
+            >
+              Complete Registration
+            </button>
+            <p class="text-sm mt-4 text-gray">
+              You will be redirected to payment gateway after form submission
+            </p>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Important Information -->
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <div class="achievement-panel p-6 text-center">
+          <div class="w-12 h-12 mx-auto mb-3 bg-item-clock-day bg-contain bg-no-repeat"></div>
+          <h4 class="font-bold text-yellow mb-2">Early Bird</h4>
+          <p class="text-sm text-gray">Register before Aug 15 for special discounts</p>
+        </div>
+        
+        <div class="achievement-panel p-6 text-center">
+          <div class="w-12 h-12 mx-auto mb-3 bg-item-emerald bg-contain bg-no-repeat"></div>
+          <h4 class="font-bold text-yellow mb-2">Secure Payment</h4>
+          <p class="text-sm text-gray">Safe and secure payment processing</p>
+        </div>
+        
+        <div class="achievement-panel p-6 text-center">
+          <div class="w-12 h-12 mx-auto mb-3 bg-item-book-written bg-contain bg-no-repeat"></div>
+          <h4 class="font-bold text-yellow mb-2">Instant Confirmation</h4>
+          <p class="text-sm text-gray">Get confirmation email immediately</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const registrationForm = document.getElementById('registration-form');
+  const typeRadios = document.querySelectorAll('input[name="type"]');
+  const teamInfo = document.getElementById('team-info');
+  
+  // Show/hide team information based on registration type
+  typeRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      if ((e.target as HTMLInputElement).value === 'team') {
+        teamInfo?.classList.remove('hidden');
+      } else {
+        teamInfo?.classList.add('hidden');
+      }
+    });
+  });
+  
+  // Handle form submission
+  registrationForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(registrationForm as HTMLFormElement);
+    const data = Object.fromEntries(formData);
+    
+    // Get selected events
+    const selectedEvents = Array.from(document.querySelectorAll('input[name="events"]:checked'))
+      .map(checkbox => (checkbox as HTMLInputElement).value);
+    
+    data.events = selectedEvents;
+    
+    console.log('Registration submitted:', data);
+    
+    // Here you would typically send the data to your backend
+    alert('Registration submitted successfully! You will be redirected to payment gateway.');
+    
+    // In a real application, redirect to payment gateway
+    // window.location.href = '/payment?registration=' + btoa(JSON.stringify(data));
+  });
+</script>

@@ -1,0 +1,55 @@
+---
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 panel-dark p-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <h1 class="text-2xl font-bold text-eclipse-purple eclipse-text-glow">ECLIPSE '25</h1>
+    </div>
+    
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#home" class="link hover:text-eclipse-blue transition-colors">Home</a>
+      <a href="#about" class="link hover:text-eclipse-blue transition-colors">About</a>
+      <a href="#events" class="link hover:text-eclipse-blue transition-colors">Events</a>
+      <a href="#schedule" class="link hover:text-eclipse-blue transition-colors">Schedule</a>
+      <a href="#contact" class="link hover:text-eclipse-blue transition-colors">Contact</a>
+      <a href="#register" class="button px-4 py-2 bg-green hover:bg-dark-green transition-colors">Register</a>
+    </div>
+    
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-btn" class="md:hidden button p-2">
+      <span class="block w-6 h-0.5 bg-white mb-1"></span>
+      <span class="block w-6 h-0.5 bg-white mb-1"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+    </button>
+  </div>
+  
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden mt-4 panel p-4">
+    <div class="flex flex-col space-y-4">
+      <a href="#home" class="link hover:text-eclipse-blue transition-colors">Home</a>
+      <a href="#about" class="link hover:text-eclipse-blue transition-colors">About</a>
+      <a href="#events" class="link hover:text-eclipse-blue transition-colors">Events</a>
+      <a href="#schedule" class="link hover:text-eclipse-blue transition-colors">Schedule</a>
+      <a href="#contact" class="link hover:text-eclipse-blue transition-colors">Contact</a>
+      <a href="#register" class="button px-4 py-2 bg-green hover:bg-dark-green transition-colors text-center">Register</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+  
+  // Close mobile menu when clicking on links
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>

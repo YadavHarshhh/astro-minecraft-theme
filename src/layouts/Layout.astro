@@ -1,0 +1,41 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "ECLIPSE '25 - The flagship gaming & development fest at MUJ" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/css/minecraft.css">
+  </head>
+  <body class="scrollbar bg-eclipse-black">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: 'Minecraft', Arial, sans-serif;
+    background-color: #0d0d0d;
+  }
+  
+  :root {
+    --block-size: 48px;
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --block-size: 32px;
+    }
+  }
+</style>

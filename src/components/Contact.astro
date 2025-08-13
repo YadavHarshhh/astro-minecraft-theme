@@ -1,0 +1,193 @@
+---
+---
+
+<section id="contact" class="py-20 bg-block-stone-brick-mossy">
+  <div class="absolute inset-0 bg-dark-75"></div>
+  <div class="relative z-10 container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6 text-eclipse-purple eclipse-text-glow">
+        Get in Touch
+      </h2>
+      <p class="text-xl text-eclipse-blue text-shadow-md">Connect with the Eclipse Team</p>
+      <div class="w-16 h-16 mx-auto mt-6 bg-item-ender-pearl bg-contain bg-no-repeat animate-float"></div>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div class="map p-8">
+          <h3 class="text-2xl font-bold mb-6 text-eclipse-blue">Contact Information</h3>
+          
+          <div class="space-y-6">
+            <!-- Location -->
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-item-map-filled bg-contain bg-no-repeat flex-shrink-0 mt-1"></div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Location</h4>
+                <p class="text-gray">Manipal University Jaipur</p>
+                <p class="text-gray">Dehmi-Kalan, Near GVK Toll Plaza</p>
+                <p class="text-gray">Jaipur-Ajmer Expressway, Jaipur</p>
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-item-book-written bg-contain bg-no-repeat flex-shrink-0 mt-1"></div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Email</h4>
+                <a href="mailto:eclipse@glitchmuj.com" class="link">eclipse@glitchmuj.com</a>
+                <br>
+                <a href="mailto:contact@glitchesports.site" class="link">contact@glitchesports.site</a>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-item-bell bg-contain bg-no-repeat flex-shrink-0 mt-1"></div>
+              <div>
+                <h4 class="font-bold text-white mb-1">Phone</h4>
+                <a href="tel:+919876543210" class="link">+91 98765 43210</a>
+                <br>
+                <a href="tel:+919876543211" class="link">+91 98765 43211</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Media -->
+          <div class="mt-8">
+            <h4 class="font-bold text-white mb-4">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a href="https://instagram.com/glitchmuj" target="_blank" class="raised-slot p-3 hover:eclipse-glow transition-all group">
+                <div class="w-6 h-6 bg-item-painting bg-contain bg-no-repeat group-hover:animate-bounce"></div>
+              </a>
+              <a href="https://glitchesports.site" target="_blank" class="raised-slot p-3 hover:eclipse-glow transition-all group">
+                <div class="w-6 h-6 bg-item-compass-up bg-contain bg-no-repeat group-hover:animate-bounce"></div>
+              </a>
+              <a href="https://discord.gg/glitchmuj" target="_blank" class="raised-slot p-3 hover:eclipse-glow transition-all group">
+                <div class="w-6 h-6 bg-item-book-normal bg-contain bg-no-repeat group-hover:animate-bounce"></div>
+              </a>
+              <a href="https://linkedin.com/company/glitchmuj" target="_blank" class="raised-slot p-3 hover:eclipse-glow transition-all group">
+                <div class="w-6 h-6 bg-item-name-tag bg-contain bg-no-repeat group-hover:animate-bounce"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="panel p-8">
+          <h3 class="text-2xl font-bold mb-6 text-eclipse-blue">Send us a Message</h3>
+          
+          <form class="space-y-6" id="contact-form">
+            <div>
+              <label for="name" class="block text-white font-bold mb-2">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                class="w-full p-3 slot bg-transparent text-white placeholder-gray focus:raised-slot transition-all outline-none"
+                placeholder="Your Name"
+              >
+            </div>
+            
+            <div>
+              <label for="email" class="block text-white font-bold mb-2">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full p-3 slot bg-transparent text-white placeholder-gray focus:raised-slot transition-all outline-none"
+                placeholder="your.email@example.com"
+              >
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-white font-bold mb-2">Subject</label>
+              <select 
+                id="subject" 
+                name="subject" 
+                required
+                class="w-full p-3 slot bg-transparent text-white focus:raised-slot transition-all outline-none"
+              >
+                <option value="" class="bg-gray text-black">Select a subject</option>
+                <option value="sponsorship" class="bg-gray text-black">Sponsorship Inquiry</option>
+                <option value="registration" class="bg-gray text-black">Registration Help</option>
+                <option value="media" class="bg-gray text-black">Media Partnership</option>
+                <option value="general" class="bg-gray text-black">General Question</option>
+                <option value="other" class="bg-gray text-black">Other</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-white font-bold mb-2">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required
+                class="w-full p-3 slot bg-transparent text-white placeholder-gray focus:raised-slot transition-all outline-none resize-none"
+                placeholder="Tell us how we can help you..."
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="w-full button py-4 text-lg bg-eclipse-purple hover:bg-purple-600 transition-all transform hover:scale-105"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="mt-12 grid md:grid-cols-4 gap-6">
+        <div class="achievement-panel p-6 text-center">
+          <div class="w-12 h-12 mx-auto mb-3 bg-item-book-enchanted bg-contain bg-no-repeat"></div>
+          <h4 class="font-bold text-yellow mb-2">Event Guide</h4>
+          <p class="text-sm text-gray">Complete guide for participants</p>
+        </div>
+        
+        <div class="achievement-panel p-6 text-center">
+          <div class="w-12 h-12 mx-auto mb-3 bg-item-map-empty bg-contain bg-no-repeat"></div>
+          <h4 class="font-bold text-yellow mb-2">Campus Map</h4>
+          <p class="text-sm text-gray">Navigate MUJ campus easily</p>
+        </div>
+        
+        <div class="achievement-panel p-6 text-center">
+          <div class="w-12 h-12 mx-auto mb-3 bg-item-clock-day bg-contain bg-no-repeat"></div>
+          <h4 class="font-bold text-yellow mb-2">Live Updates</h4>
+          <p class="text-sm text-gray">Real-time event updates</p>
+        </div>
+        
+        <div class="achievement-panel p-6 text-center">
+          <div class="w-12 h-12 mx-auto mb-3 bg-item-emerald bg-contain bg-no-repeat"></div>
+          <h4 class="font-bold text-yellow mb-2">Support</h4>
+          <p class="text-sm text-gray">24/7 participant support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const contactForm = document.getElementById('contact-form');
+  
+  contactForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(contactForm as HTMLFormElement);
+    const data = Object.fromEntries(formData);
+    
+    // Here you would typically send the data to your backend
+    console.log('Form submitted:', data);
+    
+    // Show success message
+    alert('Thank you for your message! We\'ll get back to you soon.');
+    
+    // Reset form
+    (contactForm as HTMLFormElement).reset();
+  });
+</script>

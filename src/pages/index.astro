@@ -1,41 +1,116 @@
 ---
-import Base from "~/layouts/Base.astro";
-
-const item_files = await Astro.glob(`../../public/imgs/items/*`)
-const painting_files = await Astro.glob(`../../public/imgs/paintings/*`)
-
-const items = item_files.map(file => {
-    return file.default.split('/').pop().split('.')[0]
-});
-
-const paintings = painting_files.map(file => {
-    return file.default.split('/').pop().split('.')[0]
-});
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import RoadToEclipse from '../components/RoadToEclipse.astro';
+import Events from '../components/Events.astro';
+import Schedule from '../components/Schedule.astro';
+import Sponsors from '../components/Sponsors.astro';
+import Contact from '../components/Contact.astro';
+import Register from '../components/Register.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Base>
-<div class="flex flex-col justify-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-5 py-5 px-2 markdown">
-    <h3 class=" underline text-2xl sm:text-4xl text-white">Astro Minecraft Theme</h3>
-    <p class="indent-5 text-white">
-        Show off your server, document your projects, build with blocks, display items and paintings, create game like GUIs, and tons more! This is a complete Minecraft theme with a documentation template built using Astro and Tailwindcss.
-        Check out the <a href="/docs" class="text-link hover:underline">docs</a> page for more information on how to use the theme and its features
-    </p>
-    <h3 class="text-center  underline text-4xl text-white">Features</h3>
-    <div class="flex items-center justify-center">
-        <ul>
-            <li>Display over 200+ items</li>
-            <li>Build with 100+ blocks</li>
-            <li>Repeating block backgrounds</li>
-            <li>All 25 paintings</li>
-            <li>Block based units/sizes</li>
-            <li>Create GUIs using panels, slots, and buttons</li>
-            <li>Misc UIs like maps, books, signs, and more</li>
-            <li>Minecraft typography using the Minecraft's font, text colors, and text shadows</li>
-            <li>75+ Minecraft themed colors</li>
-            <li>Markdown theme</li>
-            <li>Documentation system</li>
-        </ul>
-    </div>
-    <a href="/docs" class="self-center py-2 px-5 my-5 button text-shadow-lg text-2xl">Get started</a>
-</div>
-</Base>
+<Layout title="ECLIPSE '25 - Glitch! eSports Society">
+  <Navigation />
+  <Hero />
+  <About />
+  <RoadToEclipse />
+  <Events />
+  <Schedule />
+  <Register />
+  <Sponsors />
+  <Contact />
+  <Footer />
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Parallax effect for sections */
+  section {
+    position: relative;
+  }
+  
+  /* Custom scrollbar for the entire page */
+  :global(body) {
+    scrollbar-width: thin;
+    scrollbar-color: #7e3ff2 #333;
+  }
+  
+  :global(body::-webkit-scrollbar) {
+    width: 12px;
+  }
+  
+  :global(body::-webkit-scrollbar-track) {
+    background: #333;
+  }
+  
+  :global(body::-webkit-scrollbar-thumb) {
+    background: #7e3ff2;
+    border-radius: 6px;
+  }
+  
+  :global(body::-webkit-scrollbar-thumb:hover) {
+    background: #9d5ff5;
+  }
+</style>
+
+<script>
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href')!);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+  
+  // Add scroll-based animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-in');
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all sections
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+  
+  // Add fade-in animation class
+  const style = document.createElement('style');
+  style.textContent = `
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+</Layout>

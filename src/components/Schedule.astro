@@ -1,0 +1,219 @@
+---
+---
+
+<section id="schedule" class="py-20 bg-block-stone-brick">
+  <div class="absolute inset-0 bg-dark-75"></div>
+  <div class="relative z-10 container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-6xl font-bold mb-6 text-eclipse-purple eclipse-text-glow">
+        Event Schedule
+      </h2>
+      <div class="w-16 h-16 mx-auto mb-6 bg-item-clock-day bg-contain bg-no-repeat animate-float"></div>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+      <!-- Schedule Toggle -->
+      <div class="flex justify-center mb-8">
+        <div class="panel p-2 flex">
+          <button id="day1-btn" class="button px-6 py-3 mr-2 bg-eclipse-purple text-white">Day 1 - Aug 23</button>
+          <button id="day2-btn" class="button px-6 py-3 bg-gray text-white">Day 2 - Aug 24</button>
+        </div>
+      </div>
+      
+      <!-- Day 1 Schedule -->
+      <div id="day1-schedule" class="book p-8">
+        <h3 class="text-3xl font-bold text-center mb-8">Day 1 - August 23, 2025</h3>
+        
+        <div class="space-y-6">
+          <!-- Morning -->
+          <div class="achievement-panel p-6">
+            <h4 class="text-xl font-bold mb-4 text-yellow flex items-center">
+              <div class="w-6 h-6 mr-2 bg-item-clock-day bg-contain bg-no-repeat"></div>
+              Morning (9:00 AM - 12:00 PM)
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">9:00 AM - Registration Opens</div>
+                <div class="text-sm text-gray">Main Auditorium</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">10:00 AM - Opening Ceremony</div>
+                <div class="text-sm text-gray">Welcome & Keynote</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">11:00 AM - Achilles Begins</div>
+                <div class="text-sm text-gray">24hr Hackathon Kickoff</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">11:30 AM - Hercules Workshop</div>
+                <div class="text-sm text-gray">Game Dev Session 1</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Afternoon -->
+          <div class="achievement-panel p-6">
+            <h4 class="text-xl font-bold mb-4 text-yellow flex items-center">
+              <div class="w-6 h-6 mr-2 bg-item-clock-day bg-contain bg-no-repeat"></div>
+              Afternoon (12:00 PM - 6:00 PM)
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">12:00 PM - Lunch Break</div>
+                <div class="text-sm text-gray">Food Court</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">1:00 PM - Orion Qualifiers</div>
+                <div class="text-sm text-gray">BGMI & Valorant</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">2:00 PM - Picture Hunt</div>
+                <div class="text-sm text-gray">Campus-wide Event</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">4:00 PM - Odysseus Round 1</div>
+                <div class="text-sm text-gray">Story Games Begin</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evening -->
+          <div class="achievement-panel p-6">
+            <h4 class="text-xl font-bold mb-4 text-yellow flex items-center">
+              <div class="w-6 h-6 mr-2 bg-item-clock-night bg-contain bg-no-repeat"></div>
+              Evening (6:00 PM - 11:00 PM)
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">6:00 PM - Cultural Program</div>
+                <div class="text-sm text-gray">Music & Entertainment</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">7:30 PM - Dinner</div>
+                <div class="text-sm text-gray">Food Court</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">8:30 PM - Night Gaming</div>
+                <div class="text-sm text-gray">Casual Tournaments</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">10:00 PM - Day 1 Wrap-up</div>
+                <div class="text-sm text-gray">Results & Updates</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Day 2 Schedule -->
+      <div id="day2-schedule" class="book p-8 hidden">
+        <h3 class="text-3xl font-bold text-center mb-8">Day 2 - August 24, 2025</h3>
+        
+        <div class="space-y-6">
+          <!-- Morning -->
+          <div class="achievement-panel p-6">
+            <h4 class="text-xl font-bold mb-4 text-yellow flex items-center">
+              <div class="w-6 h-6 mr-2 bg-item-clock-day bg-contain bg-no-repeat"></div>
+              Morning (9:00 AM - 12:00 PM)
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">9:00 AM - Day 2 Begins</div>
+                <div class="text-sm text-gray">Registration for Finals</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">10:00 AM - Orion Semi-Finals</div>
+                <div class="text-sm text-gray">Top 8 Teams Battle</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">11:00 AM - Achilles Presentations</div>
+                <div class="text-sm text-gray">Hackathon Demo Time</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">11:30 AM - Hercules Showcase</div>
+                <div class="text-sm text-gray">Game Presentations</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Afternoon -->
+          <div class="achievement-panel p-6">
+            <h4 class="text-xl font-bold mb-4 text-yellow flex items-center">
+              <div class="w-6 h-6 mr-2 bg-item-clock-day bg-contain bg-no-repeat"></div>
+              Afternoon (12:00 PM - 6:00 PM)
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">12:00 PM - Lunch Break</div>
+                <div class="text-sm text-gray">Food Court</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">1:00 PM - Grand Finals</div>
+                <div class="text-sm text-gray">All Events Finals</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">3:00 PM - Sponsor Showcase</div>
+                <div class="text-sm text-gray">Industry Presentations</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">4:00 PM - Awards Preparation</div>
+                <div class="text-sm text-gray">Results Compilation</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Evening -->
+          <div class="achievement-panel p-6">
+            <h4 class="text-xl font-bold mb-4 text-yellow flex items-center">
+              <div class="w-6 h-6 mr-2 bg-item-clock-night bg-contain bg-no-repeat"></div>
+              Evening (6:00 PM - 10:00 PM)
+            </h4>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">6:00 PM - Closing Ceremony</div>
+                <div class="text-sm text-gray">Main Auditorium</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">7:00 PM - Prize Distribution</div>
+                <div class="text-sm text-gray">Winners Announced</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">8:00 PM - Networking Dinner</div>
+                <div class="text-sm text-gray">Celebration & Networking</div>
+              </div>
+              <div class="slot p-4">
+                <div class="font-bold text-eclipse-blue">9:30 PM - Eclipse Ends</div>
+                <div class="text-sm text-gray">Thank You & Goodbye</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const day1Btn = document.getElementById('day1-btn');
+  const day2Btn = document.getElementById('day2-btn');
+  const day1Schedule = document.getElementById('day1-schedule');
+  const day2Schedule = document.getElementById('day2-schedule');
+  
+  day1Btn?.addEventListener('click', () => {
+    day1Schedule?.classList.remove('hidden');
+    day2Schedule?.classList.add('hidden');
+    day1Btn.classList.add('bg-eclipse-purple');
+    day1Btn.classList.remove('bg-gray');
+    day2Btn?.classList.add('bg-gray');
+    day2Btn?.classList.remove('bg-eclipse-purple');
+  });
+  
+  day2Btn?.addEventListener('click', () => {
+    day2Schedule?.classList.remove('hidden');
+    day1Schedule?.classList.add('hidden');
+    day2Btn.classList.add('bg-eclipse-purple');
+    day2Btn.classList.remove('bg-gray');
+    day1Btn?.classList.add('bg-gray');
+    day1Btn?.classList.remove('bg-eclipse-purple');
+  });
+</script>

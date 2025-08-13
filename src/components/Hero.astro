@@ -1,0 +1,136 @@
+---
+---
+
+<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-block-end-stone">
+  <div class="absolute inset-0 bg-dark-75"></div>
+  
+  <!-- Floating particles effect -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="particle animate-float" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+    <div class="particle animate-float" style="left: 80%; top: 30%; animation-delay: 1s;"></div>
+    <div class="particle animate-float" style="left: 60%; top: 70%; animation-delay: 2s;"></div>
+    <div class="particle animate-float" style="left: 20%; top: 80%; animation-delay: 1.5s;"></div>
+  </div>
+  
+  <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
+    <!-- Main Title -->
+    <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 eclipse-text-glow text-eclipse-purple animate-glow">
+      ECLIPSE '25
+    </h1>
+    
+    <!-- Subtitle -->
+    <p class="text-xl md:text-2xl mb-4 text-eclipse-blue text-shadow-lg">
+      Presented by Glitch! eSports Society
+    </p>
+    
+    <!-- Dates -->
+    <div class="mb-8 space-y-2">
+      <p class="text-lg md:text-xl text-yellow text-shadow-md">
+        Main Event: August 23-24, 2025
+      </p>
+      <p class="text-md md:text-lg text-aqua text-shadow-md">
+        Road to Eclipse: August 16-22, 2025
+      </p>
+    </div>
+    
+    <!-- Countdown Timer -->
+    <div class="mb-8">
+      <h3 class="text-2xl mb-4 text-white text-shadow-lg">Event Countdown</h3>
+      <div class="flex justify-center space-x-4 flex-wrap">
+        <div class="countdown-digit p-4 rounded-lg text-center min-w-[80px]">
+          <div id="days" class="text-3xl font-bold">000</div>
+          <div class="text-sm">DAYS</div>
+        </div>
+        <div class="countdown-digit p-4 rounded-lg text-center min-w-[80px]">
+          <div id="hours" class="text-3xl font-bold">00</div>
+          <div class="text-sm">HOURS</div>
+        </div>
+        <div class="countdown-digit p-4 rounded-lg text-center min-w-[80px]">
+          <div id="minutes" class="text-3xl font-bold">00</div>
+          <div class="text-sm">MINUTES</div>
+        </div>
+        <div class="countdown-digit p-4 rounded-lg text-center min-w-[80px]">
+          <div id="seconds" class="text-3xl font-bold">00</div>
+          <div class="text-sm">SECONDS</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#register" class="button px-8 py-4 text-xl bg-green hover:bg-dark-green transition-all transform hover:scale-105">
+        Register Now
+      </a>
+      <a href="#events" class="button px-8 py-4 text-xl bg-eclipse-purple hover:bg-purple-600 transition-all transform hover:scale-105">
+        View Events
+      </a>
+    </div>
+    
+    <!-- Quick Stats -->
+    <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-gold">2000+</div>
+        <div class="text-sm text-gray">Footfall</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-gold">12</div>
+        <div class="text-sm text-gray">Events</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-gold">2</div>
+        <div class="text-sm text-gray">Days</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-gold">MUJ</div>
+        <div class="text-sm text-gray">Campus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #7e3ff2;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #7e3ff2;
+  }
+  
+  @media (max-width: 768px) {
+    .particle {
+      width: 2px;
+      height: 2px;
+    }
+  }
+</style>
+
+<script>
+  // Countdown Timer
+  function updateCountdown() {
+    const eventDate = new Date('2025-08-23T00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById('days')!.textContent = days.toString().padStart(3, '0');
+    document.getElementById('hours')!.textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes')!.textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds')!.textContent = seconds.toString().padStart(2, '0');
+    
+    if (distance < 0) {
+      document.getElementById('days')!.textContent = '000';
+      document.getElementById('hours')!.textContent = '00';
+      document.getElementById('minutes')!.textContent = '00';
+      document.getElementById('seconds')!.textContent = '00';
+    }
+  }
+  
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>

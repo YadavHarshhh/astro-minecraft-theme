@@ -1,26 +1,76 @@
 ---
-const {
-    class: classProp
-} = Astro.props
-
-//If you want to change the responsive height of footer:
-//tweak the `[--footer-height:${x}]` classes inside of footer component
 ---
 
-<footer class:list={[
-    classProp,
-    "[--footer-height:6] h-[calc(var(--block-size)*var(--footer-height))] xs:[--footer-height:5] sm:[--footer-height:4] md:[--footer-height:3] w-full bg-block-bedrock"
-]}>
-    <div class="flex flex-col sm:flex-row items-center justify-between h-full p-5 bg-dark-75 text-white">
-        <header class="flex flex-col gap-3 w-full sm:w-[60%]">
-            <img src="/imgs/project-logo.png" class="h-full max-w-[30ch] m-[-14px]" />
-            <p class="text-sm">Show off your server, document your projects, build with blocks, display items and paintings, create game like GUIs, and tons more! This is the Minecraft Theme for Astro</p>
-        </header>
-        <nav class="self-end flex flex-col items-end gap-1 text-link">
-            <a href="https://github.com/BryceRussell/astro-minecraft-theme" class="link">Download</a>
-            <a href="https://github.com/BryceRussell" class="link">Github</a>
-            <a href="https://astro.build" class="link">Astro</a>
-            <a href="https://discord.com/invite/grF4GTXXYm" class="link">Discord</a>
-        </nav>
+<footer class="bg-block-bedrock py-12">
+  <div class="absolute inset-0 bg-dark-75"></div>
+  <div class="relative z-10 container mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Eclipse Info -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-eclipse-purple eclipse-text-glow">ECLIPSE '25</h3>
+        <p class="text-gray mb-4">
+          The flagship gaming & development fest at Manipal University Jaipur. 
+          Join us for an unforgettable experience of competition, learning, and networking.
+        </p>
+        <div class="flex space-x-3">
+          <a href="https://instagram.com/glitchmuj" target="_blank" class="raised-slot p-2 hover:eclipse-glow transition-all">
+            <div class="w-5 h-5 bg-item-painting bg-contain bg-no-repeat"></div>
+          </a>
+          <a href="https://glitchesports.site" target="_blank" class="raised-slot p-2 hover:eclipse-glow transition-all">
+            <div class="w-5 h-5 bg-item-compass-up bg-contain bg-no-repeat"></div>
+          </a>
+          <a href="https://discord.gg/glitchmuj" target="_blank" class="raised-slot p-2 hover:eclipse-glow transition-all">
+            <div class="w-5 h-5 bg-item-book-normal bg-contain bg-no-repeat"></div>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-bold mb-4 text-eclipse-blue">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="link hover:text-eclipse-blue transition-colors">Home</a></li>
+          <li><a href="#about" class="link hover:text-eclipse-blue transition-colors">About</a></li>
+          <li><a href="#events" class="link hover:text-eclipse-blue transition-colors">Events</a></li>
+          <li><a href="#schedule" class="link hover:text-eclipse-blue transition-colors">Schedule</a></li>
+          <li><a href="#register" class="link hover:text-eclipse-blue transition-colors">Register</a></li>
+        </ul>
+      </div>
+      
+      <!-- Events -->
+      <div>
+        <h4 class="text-lg font-bold mb-4 text-eclipse-blue">Main Events</h4>
+        <ul class="space-y-2">
+          <li class="text-gray">Hercules - Game Dev</li>
+          <li class="text-gray">Achilles - Hackathon</li>
+          <li class="text-gray">Odysseus - Story Games</li>
+          <li class="text-gray">Orion - LAN Tournaments</li>
+          <li class="text-gray">Picture Hunt</li>
+        </ul>
+      </div>
+      
+      <!-- Contact -->
+      <div>
+        <h4 class="text-lg font-bold mb-4 text-eclipse-blue">Contact</h4>
+        <div class="space-y-2 text-gray">
+          <p>Manipal University Jaipur</p>
+          <p>Jaipur-Ajmer Expressway</p>
+          <p><a href="mailto:eclipse@glitchmuj.com" class="link">eclipse@glitchmuj.com</a></p>
+          <p><a href="tel:+919876543210" class="link">+91 98765 43210</a></p>
+        </div>
+      </div>
     </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="text-gray text-sm mb-4 md:mb-0">
+        © 2025 Eclipse '25. All rights reserved. Powered by Glitch! eSports Society.
+      </div>
+      <div class="flex space-x-4 text-sm">
+        <a href="/privacy" class="link hover:text-eclipse-blue transition-colors">Privacy Policy</a>
+        <a href="/terms" class="link hover:text-eclipse-blue transition-colors">Terms of Service</a>
+        <a href="/code-of-conduct" class="link hover:text-eclipse-blue transition-colors">Code of Conduct</a>
+      </div>
+    </div>
+  </div>
 </footer>
